@@ -13,8 +13,27 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      textShadow:{
+      'title' : '#FC0 1px 0px 30px',
+      'decription': '#08C2F9 1px 0px 15px'
+      },
+      keyframes:{
+        blink: {
+         '50%' : { borderColor: 'transparent'},
+      },
+      typing: {
+        from: {
+          width: '0'
+        },
+        to: {
+          width: '100%'     
+        },
+      },
     },
+    }
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-textshadow')
+  ]
 }
 export default config
