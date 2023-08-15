@@ -5,7 +5,7 @@ import {useEffect, useState} from "react";
 import axios from 'axios';
 import Footer from "../../components/Footer";
 
-export default function page() {
+export default function Currencies() {
 const [currencies, setCurrencies] = useState({});
 const [currenciesSearch, setCurrenciesSearch] = useState('')
 
