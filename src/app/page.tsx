@@ -8,7 +8,8 @@ import SwiperCurrencies from '../components/SwiperCurrencies'
 import Footer from '../components/Footer';
 import Link from 'next/link';
 
-const objecto = {
+
+const objecto : Object = {
 
 
   AUD: 'Australia Dólar '
@@ -556,30 +557,13 @@ const objecto = {
   }
 export default function Home() {
   
-  const [currencies, setCurrencies] = useState({})
-  useEffect(() => {
-    const URL = 'http://data.fixer.io/api/latest?access_key=0e1a407873ed6ebb4a6c0ac05daec89b'
-    const entries = Object.entries(objecto);
-    /* 
-    axios
-    .get(URL)
-    .then((res) => {
-      const ratesCurrencies = []
-      for (const [key, value] of Object.entries(res.data.rates)) {
-        console.log(`${key}: ${value}`);
-      }
-      console.log(res.data.rates) ;
-    })
-    .catch((err) => console.log(err)); */
-    setCurrencies(objecto)
- 
-  }, [])
+  
 
   
   return (
     <main className="flex min-h-screen flex-col items-center justify-around p-0 overflow-hidden pt-36 ">
       <Header />
-      <SwiperCurrencies currencies={currencies}/>
+      <SwiperCurrencies />
 
       <Description />
       <div className=" flex gap-1">

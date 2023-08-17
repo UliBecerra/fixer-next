@@ -1,6 +1,7 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { useEffect, useState } from 'react'
+import  axios  from "axios";
 import { Autoplay, EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
@@ -13,8 +14,19 @@ import 'swiper/css/effect-coverflow';
 import abbreviations from '../resources/abbreviations.js'
 
 
-export default function SwiperCurrencies({currencies}) {
-  console.log(currencies)
+export default function SwiperCurrencies() {
+  const [currencies, setCurrencies] = useState(Object)
+  useEffect(() => {
+    
+    const URL = 'http://data.fixer.io/api/latest?access_key=0e1a407873ed6ebb4a6c0ac05daec89b'
+  
+    axios
+    .get(URL)
+    .then((res) => {
+      setCurrencies(res.data.rates)
+    })
+    .catch((err) => console.log(err)); 
+  }, [])
   return (
 
        <Swiper
@@ -42,8 +54,8 @@ export default function SwiperCurrencies({currencies}) {
            Object.entries(currencies).map((entrie, i) => (
             <SwiperSlide key={i}  className=' min-w-[100px] p-1 min-h-full border-2 border-green-500 text-center rounded-md overflow-hidden backdrop-blur-sm sm:max-w-xs sm:min-w-[100px]'  > 
             <h3 className='font-bold '>{entrie[0]}</h3> 
-            <h4 className='text-sm'>{abbreviations[entrie[0]]}</h4>
-            <p>{entrie[1]}</p>
+            <h4 className='text-sm'>{abbreviations[entrie[0] as keyof typeof abbreviations]}</h4>
+            <p>{currencies[entrie[0] as keyof typeof currencies]}</p>
             
          </SwiperSlide>
           )) 

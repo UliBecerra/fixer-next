@@ -10,12 +10,11 @@ const [currencies, setCurrencies] = useState({});
 const [currenciesSearch, setCurrenciesSearch] = useState('')
 
 const miString = 'Mundo';
-const nodoString: React.ReactNode = miString;
 
 const currenciesWithSearch = Object.entries(currencies).filter(currency => 
   {
    
-   if (abbreviations[currency[0] as keyof typeof abbreviations] ) {
+   if (!abbreviations[currency[0] as keyof typeof abbreviations] ) {
      return false
     }  
    
@@ -28,6 +27,7 @@ const currenciesWithSearch = Object.entries(currencies).filter(currency =>
     setCurrenciesSearch(inputElement.value  )
     console.log(currenciesSearch)
   }
+
 useEffect(() => {
   const URL = 'http://data.fixer.io/api/latest?access_key=0e1a407873ed6ebb4a6c0ac05daec89b'
   
@@ -37,8 +37,9 @@ useEffect(() => {
     setCurrencies(res.data.rates)
   })
   .catch((err) => console.log(err));
- 
 }, [])
+/* console.log(currencies)
+ */
 useEffect(() =>{
 
 },[currenciesSearch])
@@ -56,14 +57,20 @@ useEffect(() =>{
       </form> */}
       <ul className='grid   capitalize max-w-[1150px] px-2 gap-6 auto-rows-auto grid-cols-[repeat(auto-fill,_minmax(130px,_1fr))] first-letter: place-content-center m-auto'>
         {
-           currenciesWithSearch.map((entrie, i) => (
+           currenciesWithSearch.map((entrie, i) => {
+            console.log(currencies[entrie[0] as keyof typeof currencies])
+            
+
+            return (
+
             <article key={i} className='grid place-content-center text-center border border-gray-600 rounded-md p-4'  > 
+            
             <h3 className='font-bold'>{entrie[0]}</h3> 
             <h4 className="text-gray-400">{abbreviations[entrie[0] as keyof typeof abbreviations]}</h4>
-            <p className="text-yellow-500">{nodoString}</p>
+            <p className="text-yellow-500">{currencies[entrie[0] as keyof typeof currencies]}</p>
             
          </article>
-          )) 
+          )}) 
          
         } 
         
