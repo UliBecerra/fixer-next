@@ -50,10 +50,10 @@ useEffect(() =>{
 
 },[currenciesSearch])
   return (
-    <div className="pt-40 grid gap-10  place-content-center">
+    <div className="p-1  sm:p-20 lg:pt-40 grid gap-10  place-content-center max-w-[100vw]">
       <Header/>
        <article className="">
-        <h1 className="block w-0 max-w-xs px-4  text-[2.3rem] font-bold overflow-hidden  whitespace-nowrap  border-r-[.1em] animate-[typing_7s_steps(15)_1_normal_both,_blink_1s_steps(1)_infinite] m-auto">Foreign exchange</h1>
+        <h1 className="block w-0 max-w-xs px-4  text-[2.3rem] font-bold overflow-hidden  whitespace-nowrap  border-r-[.1em] animate-[typing_7s_steps(15)_1_normal_both,_blink_1s_steps(1)_infinite] m-auto ">Foreign exchange</h1>
 
 
       </article>
@@ -61,7 +61,7 @@ useEffect(() =>{
         <input type="text" name="" id="" className="w-[350px] text-center pl-2 text-green-800 text-lg focus:font-bold focus:outline-none p-3 focus:placeholder:text-red-600 focus:placeholder:font-light rounded-md" placeholder="Ingresa el nombre/abreviatura de la divisa" value={currenciesSearch}  onChange={handleSearch}/>
       
       </form> 
-      <ul className='grid   capitalize max-w-[1150px] px-2 gap-6 auto-rows-auto grid-cols-[repeat(auto-fill,_minmax(130px,_1fr))] first-letter: place-content-center m-auto'>
+      <ul className='grid   capitalize max-w-[100vw] lg:max-w-[1150px] px-2 gap-6 auto-rows-auto grid-cols-[repeat(auto-fill,_minmax(130px,_1fr))] first-letter: place-content-center m-auto'>
         {
            currenciesWithSearch.map((entrie, i) => {
             

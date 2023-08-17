@@ -7,9 +7,16 @@ export default function Header() {
       <Link href='/'> <Image
       src="/icon.png"
       alt="Home"
-      className=" cursor-pointer"
+      className=" cursor-pointer hidden sm:block"
       width={100}
       height={24}
+      priority/>
+      <Image
+      src="/icon.png"
+      alt="Home"
+      className=" cursor-pointer sm:hidden block"
+      width={60}
+      height={16}
       priority/>
 </Link>
       

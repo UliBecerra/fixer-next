@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function Description() {
   return (
     <div className='p-4 grid gap-20 max-w-full'>
-      <article className='grid grid-cols-[auto_1fr] place-content-center  max-w-full'>
+      <article className='grid gap-4 lg:gap-0  sm:grid-cols-[auto_1fr] place-content-center  max-w-full'>
       <h1 className='col-span-2 m-auto text-[3rem] font-bold text-shadow-title '>¿Qué es Forex?</h1>
       <Image
       src="/currencies-img1.jpeg"
@@ -38,9 +38,16 @@ Es uno de los mercados más activos del mundo, con particulares, empresas, banco
   <Image
    src='/participant.jpg'
    alt=" Participante"
-   className="m-auto  rounded-r-3xl  "
+   className="m-auto  rounded-r-3xl hidden sm:block "
    width={300}
    height={60}
+  ></Image>
+  <Image
+   src='/participant.jpg'
+   alt=" Participante"
+   className="m-auto  rounded-r-3xl block sm:hidden "
+   width={150}
+   height={30}
   ></Image>
 </article>
 <div className="">
@@ -48,21 +55,21 @@ Es uno de los mercados más activos del mundo, con particulares, empresas, banco
 
 
 <article className='  grid grid-cols-2 grid-rows-2 h-[600px] max-w-5xl m-auto gap-2 bg-gray-900 p-4 rounded-md'>
-<div className=" relative   grid place-content-center px-10 text-lg bg-[url('https://www.ceupe.com/images/easyblog_articles/3349/liquide_20220425-214948_1.png')] bg-contain bg-no-repeat bg-center object-center cursor-pointer min-w-full min-h-full 0">
-<h4 className='text-transparent hover:text-white rounded-xl hover:flex hover:bg-opacity-70 hover:backdrop-blur-sm  absolute  items-center justify-center p-12 min-h-full w-full hover:bg-black ' >El mercado de divisas es conocido por su alta liquidez, lo que significa que es fácil comprar y vender divisas sin afectar significativamente los precios.
+<div className=" relative   grid place-content-center px-10 text-xs sm:text-lg bg-[url('https://www.ceupe.com/images/easyblog_articles/3349/liquide_20220425-214948_1.png')] bg-contain bg-no-repeat bg-center object-center cursor-pointer min-w-full min-h-full 0">
+<h4 className='text-transparent hover:text-white rounded-xl hover:flex hover:bg-opacity-70 hover:backdrop-blur-sm  absolute  items-center justify-center p-12 min-h-full w-full hover:bg-black  ' >El mercado de divisas es conocido por su alta liquidez, lo que significa que es fácil comprar y vender divisas sin afectar significativamente los precios.
 </h4>
 </div>
-<div className="relative   grid place-content-center px-10 text-lg  bg-[url('https://bubot.es/wp-content/uploads/2014/03/marketing-online.png')] bg-contain bg-no-repeat bg-center object-center cursor-pointer 
+<div className="relative   grid place-content-center px-10 text-xs sm:text-lg  bg-[url('https://bubot.es/wp-content/uploads/2014/03/marketing-online.png')] bg-contain bg-no-repeat bg-center object-center cursor-pointer 
  min-w-full min-h-full ">
 <h4 className='text-transparent hover:text-white rounded-xl hover:flex hover:bg-opacity-70 hover:backdrop-blur-sm  absolute  items-center justify-center p-12 min-h-full w-full hover:bg-black'>Los factores que influyen en los movimientos de los precios de las divisas incluyen los indicadores económicos, los eventos políticos, las políticas monetarias y las expectativas del mercado.</h4>
 </div>
 
-<div className="relative   grid place-content-center px-10 text-lg  bg-[url('https://invertirconcabeza.com//wp-content/uploads/2020/11/Analisis1.jpg')] bg-contain bg-no-repeat bg-center object-center cursor-
+<div className="relative   grid place-content-center px-10 text-xs sm:text-lg  bg-[url('https://invertirconcabeza.com//wp-content/uploads/2020/11/Analisis1.jpg')] bg-contain bg-no-repeat bg-center object-center cursor-
  pointer min-w-full min-h-full ">
 <h4 className='text-transparent hover:text-white rounded-xl hover:flex hover:bg-opacity-70 hover:backdrop-blur-sm  absolute  items-center justify-center p-12 min-h-full w-full hover:bg-black'>Los traders de Forex utilizan análisis técnico y fundamental para tomar decisiones de trading y gestionar el riesgo.
 </h4 >
 </div>
-<div className="relative   grid place-content-center px-10 text-lg  bg-[url('https://img.freepik.com/vector-premium/concepto-servicio-24-horas-al-dia-7-dias-semana-24-7-abierto-icono-neon-icono-servicio-soporte-ilustracion-stock-vectorial_100456-3505.jpg')]  bg-contain bg-no-repeat bg-center object-center cursor-pointer min-w-full min-h-full ">
+<div className="relative   grid place-content-center px-10 text-xs sm:text-lg  bg-[url('https://img.freepik.com/vector-premium/concepto-servicio-24-horas-al-dia-7-dias-semana-24-7-abierto-icono-neon-icono-servicio-soporte-ilustracion-stock-vectorial_100456-3505.jpg')]  bg-contain bg-no-repeat bg-center object-center cursor-pointer min-w-full min-h-full ">
 <h4 className='text-transparent hover:text-white rounded-xl hover:flex hover:bg-opacity-70 hover:backdrop-blur-sm  absolute  items-center justify-center p-12 min-h-full w-full hover:bg-black'>El mercado de Forex está abierto las 24 horas del día, cinco días a la semana, lo que permite a los traders operar en diferentes husos horarios.
 </h4>
 </div>
