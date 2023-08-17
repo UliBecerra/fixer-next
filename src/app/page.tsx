@@ -561,7 +561,7 @@ export default function Home() {
 
   
   return (
-    <main className="flex min-h-screen flex-col items-center justify-around p-0 overflow-hidden pt-36 ">
+    <main className="flex min-h-screen flex-col items-center justify-around p-0 overflow-hidden pt-20 sm:pt-36 ">
       <Header />
       <SwiperCurrencies />
 

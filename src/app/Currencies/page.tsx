@@ -50,7 +50,7 @@ useEffect(() =>{
 
 },[currenciesSearch])
   return (
-    <div className="p-1  sm:p-20 lg:pt-40 grid gap-10  place-content-center max-w-[100vw]">
+    <div className="pt-40 grid gap-10  place-content-center max-w-[100vw]">
       <Header/>
        <article className="">
         <h1 className="block w-0 max-w-xs px-4  text-[2.3rem] font-bold overflow-hidden  whitespace-nowrap  border-r-[.1em] animate-[typing_7s_steps(15)_1_normal_both,_blink_1s_steps(1)_infinite] m-auto ">Foreign exchange</h1>
