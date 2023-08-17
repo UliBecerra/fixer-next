@@ -12,20 +12,23 @@ import 'swiper/css/effect-coverflow';
 
 
 import abbreviations from '../resources/abbreviations.js'
-
+import currenciesBackup from '../resources/currenciesBackup.js'
 
 export default function SwiperCurrencies() {
   const [currencies, setCurrencies] = useState(Object)
   useEffect(() => {
     
-    const URL = 'http://data.fixer.io/api/latest?access_key=0e1a407873ed6ebb4a6c0ac05daec89b'
   
-    axios
+    // ! Los datos son obtenidos a traves de la siguiente api pero por seguridad por seguridad mi navegador lo bloquea 
+   /*  axios
+       const URL = 'http://data.fixer.io/api/latest?access_key=0e1a407873ed6ebb4a6c0ac05daec89b'
+
     .get(URL)
     .then((res) => {
       setCurrencies(res.data.rates)
     })
-    .catch((err) => console.log(err)); 
+    .catch((err) => console.log(err));  */
+    setCurrencies(currenciesBackup)
   }, [])
   return (
 
