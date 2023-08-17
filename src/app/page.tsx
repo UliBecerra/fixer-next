@@ -20,8 +20,7 @@ const objecto = {
   EUR: 'Euro'
   ,
   
-  JPY: 'Japón Yen'
-  ,
+
   
   CHF: 'Suiza Franco'
   ,
@@ -50,8 +49,7 @@ const objecto = {
   AWG: 'Aruba Florín'
   ,
   
-  AUD: 'Australia Dólar'
-  ,
+
   
   ATS: '(EURO) Austria Chelín'
   ,
@@ -98,8 +96,6 @@ const objecto = {
   BRL: 'Brasil Real'
   ,
   
-  GBP: 'Gran Bretaña Libra esterlina'
-  ,
   
   BND: 'Brunéi Dólar'
   ,
@@ -190,8 +186,8 @@ const objecto = {
   ETB: 'Etiopía Birr'
   ,
   
-  EUR: 'Euro'
-  ,
+  
+
   
   FKP: 'Islas Falkland Libra'
   ,
@@ -493,8 +489,8 @@ const objecto = {
   SEK: 'Suecia Corona'
   ,
   
-  CHF: 'Suiza Franco'
-  ,
+ 
+
   
   SYP: 'Siria Libra'
   ,
@@ -523,8 +519,7 @@ const objecto = {
   TMM: 'Turkmenistán Manat'
   ,
   
-  USD: 'EE.UU. Dólar'
-  ,
+
   
   UGX: 'Uganda Chelín'
   ,
