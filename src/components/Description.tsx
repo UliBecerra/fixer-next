@@ -3,8 +3,8 @@ import Image from 'next/image'
 export default function Description() {
   return (
     <div className='p-4 grid gap-20 max-w-full'>
-      <article className='grid gap-4 grid-cols-1  lg:gap-0  sm:grid-cols-[auto_1fr] place-content-center  max-w-full'>
-      <h1 className='col-span-2 m-auto text-[3rem] font-bold text-shadow-title  '>¿Qué es Forex?</h1>
+      <article className='sm:grid gap-4   lg:gap-0  sm:grid-cols-[auto_1fr] place-content-center  max-w-full'>
+      <h1 className='col-span-2 m-auto text-[3rem] font-bold text-shadow-title block '>¿Qué es Forex?</h1>
       <Image
       src="/currencies-img1.jpeg"
       alt="Mercado de divisas"
